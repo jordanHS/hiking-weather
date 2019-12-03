@@ -1,6 +1,6 @@
-export class WeatherService {
-    async getWeatherByCity(city) {
-        let response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.API_KEY}`);
+export class HikingWeather {
+    async getWeatherByDate(date) {
+        let response = await fetch(`api.openweathermap.org/data/2.5/forecast?city=${city}lat=47.6062&lon=-122.3321&appid=${process.env.API_KEY}`);
         let jsonifiedResponse = await response.json();
         return jsonifiedResponse;
         } catch(error) {
